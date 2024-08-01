@@ -1,0 +1,18 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Ajusta la altura según necesites */
+    background-color: #1a1a1a; /* Fondo gris oscuro */
+    padding: 20px;
+    clear: both; /* Asegura que el footer no se superponga con otros elementos flotantes */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff; /* Texto blanco */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    text-shadow: 0 0 5px #00ffff; /* Resplandor azul neón */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}

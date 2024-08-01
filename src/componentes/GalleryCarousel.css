@@ -1,0 +1,112 @@
+/* GalleryCarousel.css */
+
+/* Estilo del carrusel */
+.gallery-carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1b1b1b, #333333); /* Fondo negro y gris */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+/* Estilo de los elementos */
+.items {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.item {
+    min-width: 100%;
+    padding: 5px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 500px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilo de los controles */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.control {
+    background-color: rgba(0, 255, 255, 0.8); /* Color azul neón */
+    border: 2px solid #ffffff; /* Borde blanco */
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control:hover {
+    background-color: rgba(0, 255, 255, 1); /* Más neón al pasar el cursor */
+    transform: scale(1.1);
+}
+
+.control.prev {
+    align-self: flex-start;
+}
+
+.control.next {
+    align-self: flex-end;
+}
+
+/* Estilo del modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo del título de la galería */
+.gallery-title {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    font-size: 2rem;
+    color: #00ffff; /* Color azul neón */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

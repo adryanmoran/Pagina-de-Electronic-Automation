@@ -1,0 +1,121 @@
+/* Estilos básicos para el header */
+header {
+  background-color: #1b1b1b;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0066cc;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+body {
+  margin-top: 60px;
+}
+
+/* Estilo del menú hamburguesa */
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger div {
+  background-color: #0066cc;
+  height: 4px;
+  border-radius: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mostrar el menú hamburguesa en dispositivos móviles y tablets */
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex;
+  }
+}
+
+/* Ocultar el menú de navegación en dispositivos móviles y tablets por defecto */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Pseudo-elemento para la animación de subrayado */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #0066cc;
+  transition: width 0.4s ease, right 0.4s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  right: 0;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #1b1b1b;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      border-top: 2px solid #0066cc;
+  }
+
+  nav ul.show-menu {
+      display: flex;
+  }
+
+  nav ul li {
+      width: 100%;
+  }
+
+  nav ul li a {
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+  }
+}

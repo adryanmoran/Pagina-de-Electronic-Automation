@@ -1,0 +1,33 @@
+#nosotros {
+  background: linear-gradient(135deg, #000000, #2f2f2f); /* Degradado de negro a gris */
+  color: #ffffff; /* Texto en blanco */
+  font-family: 'Orbitron', sans-serif;
+  padding: 100px 50px; /* Incrementa el padding superior e inferior */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image {
+  width: 200px; /* Aumenta el tamaño de la imagen */
+  height: 200px; /* Aumenta el tamaño de la imagen */
+  border-radius: 50%;
+  border: 3px solid #00bfff; /* Azul neón */
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.5), 
+              0 0 20px rgba(0, 191, 255, 0.4), 
+              0 0 30px rgba(0, 191, 255, 0.3), 
+              0 0 40px rgba(0, 191, 255, 0.2);
+  animation: neon 1.5s ease-in-out infinite alternate;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+p {
+  font-size: 1.4rem; /* Aumenta el tamaño del texto */
+  line-height: 1.8; /* Aumenta la altura de línea para mejorar la legibilidad */
+  color: #e0e0e0; /* Gris claro para el texto */
+  margin: 20px 0;
+}

@@ -1,0 +1,83 @@
+#servicios {
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#servicios h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00ffcc;
+    text-transform: uppercase;
+}
+
+#servicios ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+#servicios li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px; /* Aumentar espacio a la izquierda para los iconos */
+    display: flex;
+    align-items: center; /* Alinear verticalmente el texto con los iconos */
+}
+
+#servicios li::before {
+    content: '✔';
+    color: #00ffcc;
+    font-size: 1.2rem;
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+#servicios li span {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #servicios {
+        padding: 30px 10px;
+    }
+
+    #servicios h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    #servicios li {
+        font-size: 1rem;
+        padding-left: 25px;
+    }
+
+    #servicios li::before {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #servicios h3 {
+        font-size: 20px;
+    }
+
+    #servicios li {
+        font-size: 0.9rem;
+        padding-left: 20px;
+    }
+
+    #servicios li::before {
+        font-size: 0.9rem;
+    }
+}
